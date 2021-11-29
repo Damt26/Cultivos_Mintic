@@ -1,3 +1,4 @@
+import React from 'react';
 import './styles.css';
 import campo3 from './assets/img/campo3.jpg';
 import campo4 from './assets/img/campo4.jpg';
@@ -70,14 +71,14 @@ function LandingPage() {
                                 <div className="row gx-5">
                                     <div className="col-md-6 mb-5">
                                         <div className="text-center">
-                                        <img src={siembra2} alt="" style={{ height: '5rem', width: '5rem'}}></img>
+                                            <img src={siembra2} alt="" style={{ height: '5rem', width: '5rem' }}></img>
                                             <h3 className="font-alt">Lorem</h3>
                                             <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 mb-5">
                                         <div className="text-center">
-                                        <img src={granja} alt="" style={{ height: '5rem', width: '5rem'}}></img>
+                                            <img src={granja} alt="" style={{ height: '5rem', width: '5rem' }}></img>
                                             <h3 className="font-alt">Lorem</h3>
                                             <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                         </div>
@@ -86,14 +87,14 @@ function LandingPage() {
                                 <div className="row">
                                     <div className="col-md-6 mb-5 mb-md-0">
                                         <div className="text-center">
-                                        <img src={siembra} alt="" style={{ height: '5rem', width: '5rem'}}></img>
+                                            <img src={siembra} alt="" style={{ height: '5rem', width: '5rem' }}></img>
                                             <h3 className="font-alt">Lorem</h3>
                                             <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="text-center">
-                                            <img src={ecologia} alt="" style={{ height: '5rem', width: '5rem'}}></img>
+                                            <img src={ecologia} alt="" style={{ height: '5rem', width: '5rem' }}></img>
                                             <h3 className="font-alt">Lorem</h3>
                                             <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                         </div>
@@ -102,7 +103,7 @@ function LandingPage() {
                             </div>
                         </div>
                         <div className="col-lg-4 order-lg-0">
-                        <img src={campo3} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
+                            <img src={campo3} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
                         </div>
                     </div>
                 </div>
@@ -118,7 +119,7 @@ function LandingPage() {
                         </div>
                         <div className="col-sm-8 col-md-6">
                             <img className="img-fluid rounded-circle"
-                                src={campo4} alt="..." width="40vw" height="40vh"/>
+                                src={campo4} alt="..." style={{ height: '25rem', width: '25rem', borderRadius: '18px' }} />
                         </div>
                     </div>
                 </div>
@@ -135,28 +136,52 @@ function LandingPage() {
                     </div>
                 </div>
             </section>
-            <section className="bg-gradient-primary-to-secondary" id="download">
-                <div className="container px-5">
-                    <h2 className="text-center text-white font-alt mb-4">Get the app now!</h2>
-                    <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                        
-                        <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg"
-                            alt="..." /></a>
-                        <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+            <footer className="bg-white pt-4 pb-3">
+                <div className="container px-4 py-2">
+                    <div className="row gx-1 fs-5 py-2">
+                        <div className="col">
+                            <div className=""><b>Contacto </b></div>
+                            <ul className="list-group fs-6">
+                                <li className="list-group-item border-white">Palmira, Valle</li>
+                                <li className="list-group-item border-white">(2)2752727</li>
+                                <li className="list-group-item border-white">Agricola Las Malocas Ltda</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <div className=""><b>Recursos </b></div>
+                            <ul className="list-group fs-6">
+                                <li className="list-group-item border-white">Inicio</li>
+                                <li className="list-group-item border-white">Servicios</li>
+                                <li className="list-group-item border-white">Información</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <div className=""><b> Ingresos </b></div>
+                            <ul className="list-group fs-6">
+                                <li className="list-group-item border-white">Inicio de sesión</li>
+                                <li className="list-group-item border-white">Registro</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <div className=""><b>Agricola Las Malocas Ltda </b></div>
+                            <ul className="list-group fs-6">
+                                <li className="list-group-item border-white">Km 7 via Palmira - Cerrito en la ciudad de Palmira</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <footer className="bg-black text-center py-5">
-                <div className="container px-5">
-                    <div className="text-white-50 small">
-                        <div className="mb-2">&copy; Your Website 2021. All Rights Reserved.</div>
-                        <a href="#!">Privacy</a>
-                        <span className="mx-1">&middot;</span>
-                        <a href="#!">Terms</a>
-                        <span className="mx-1">&middot;</span>
-                        <a href="#!">FAQ</a>
+                <div className="container px-4 py-2"> 
+                    <div className="row">
+                    <div className="col fs-3"> 
+                        <b>Malocas</b>
+                        </div>
+                        <div className="col text-end text-muted"> 
+                        &copy; Your Website 2021. All Rights Reserved.
+                        </div>
+                
                     </div>
                 </div>
+
             </footer>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

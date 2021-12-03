@@ -1,7 +1,10 @@
 import React from 'react';
-import './styles.css';
+import './assets/styles/index.css';
+import campo1 from './assets/img/campo1.jpg';
+import campo2 from './assets/img/campo2.jpg';
 import campo3 from './assets/img/campo3.jpg';
 import campo4 from './assets/img/campo4.jpg';
+import campo5 from './assets/img/campo5.jpg';
 import campo6 from './assets/img/campo6.jpg';
 import azada from './assets/img/scythe.png';
 import siembra2 from './assets/img/siembra2.png';
@@ -28,8 +31,8 @@ function LandingPage() {
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#features">Inicio</a></li>
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Servicios</a></li>
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Información</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Ingreso</a></li>
-                            <li className="nav-item"><a role="button" className="btn btn-success me-lg-3" href="#download" >Registro</a></li>
+                            <li className="nav-item"><a className="nav-link me-lg-3" href="#login" data-bs-toggle="modal" data-bs-target="#login">Ingreso</a></li>
+                            <li className="nav-item"><a role="button" className="btn btn-success me-lg-3" href="#register" data-bs-toggle="modal" data-bs-target="#register">Registro</a></li>
                         </ul>
                     </div>
                 </div>
@@ -124,18 +127,7 @@ function LandingPage() {
                     </div>
                 </div>
             </aside>
-            <section className="cta">
-                <div className="cta-content">
-                    <div className="container px-5">
-                        <h2 className="text-white display-1 lh-1 mb-4">
-                            Stop waiting.
-                            <br />
-                            Start building.
-                        </h2>
-
-                    </div>
-                </div>
-            </section>
+            <img src={campo5} alt="" style={{ height: '90vh', width: '100%' }} />
             <footer className="bg-white pt-4 pb-3">
                 <div className="container px-4 py-2">
                     <div className="row gx-1 fs-5 py-2">
@@ -170,22 +162,99 @@ function LandingPage() {
                         </div>
                     </div>
                 </div>
-                <div className="container px-4 py-2"> 
+                <div className="container px-4 py-2">
                     <div className="row">
-                    <div className="col fs-3"> 
-                        <b>Malocas</b>
+                        <div className="col fs-3">
+                            <b>Malocas</b>
                         </div>
-                        <div className="col text-end text-muted"> 
-                        &copy; Your Website 2021. All Rights Reserved.
+                        <div className="col text-end text-muted">
+                            &copy; Your Website 2021. All Rights Reserved.
                         </div>
-                
+
                     </div>
                 </div>
-
             </footer>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-            <script src="js/scripts.js"></script>
+            <div className="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                <div className="modal-dialog modal-xl">
+                    <div className="modal-content" style={{ borderRadius: '18px', textAlign: 'center' }}>
+                        <div className="modal-body p-0">
+                            <div className="card" style={{ borderRadius: '18px', borderStyle: 'none' }}>
+                                <div className="row g-0" >
+                                    <div className="col-md-4 col-sm-0" >
+                                        <img src={campo1} className="img-fluid" style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none' }} alt="..." />
+                                    </div>
+                                    <div className="col-md-8 col-sm-12">
+                                        <div className="card-body">
+                                            <div className="d-flex bd-highlight mb-3">
+                                                <div className="p-2 bd-highlight fs-3 ms-auto">Crear cuenta</div>
+                                                <div className="ms-auto p-2 bd-highlight">
+                                                    <button type="button" className="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <form id="form_rgstr">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" className="form-control rounded-pill mx-2 border-success border-2" placeholder="Nombre" aria-label="nm_rgstr" />
+                                                    <input type="text" className="form-control rounded-pill mx-2 border-success border-2" placeholder="Apellido" aria-label="lst_nm_rgstr" />
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="email" className="form-control rounded-pill mx-2 border-success border-2" placeholder="Email" aria-label="email_rgstr" />
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="password" className="form-control rounded-pill mx-2 border-success border-2" placeholder="Contraseña" aria-label="psswrd_1_rgstr" />
+                                                    <input type="password" className="form-control rounded-pill mx-2 border-success border-2" placeholder="Repetir contraseña" aria-label="psswrd_2_rgstr" />
+                                                </div>
+                                                <div className="d-grid gap-1 mx-2">
+                                                    <button className="btn btn-success btn-lg rounded-pill">Crear</button>
+                                                </div>
+                                            </form>
+                                            <hr />
+                                            <a className="fs-6 text-success" href="#login" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login">¡Inicia sesión en Malocas!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+                <div className="modal-dialog">
+                    <div className="modal-content" style={{ borderRadius: '18px', textAlign: 'center' }}>
+                        <div className="modal-body p-0">
+                            <div className="card" style={{ borderRadius: '18px', borderStyle: 'none' }}>
+                                <div className="row g-0" >
+                                    <div className="col-md-4 col-sm-0" >
+                                        <img src={campo2} className="img-fluid" style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none', height: '100%' }} alt="..." />
+                                    </div>
+                                    <div className="col-md-8 col-sm-12">
+                                        <div className="card-body">
+                                            <div className="d-flex bd-highlight mb-3">
+                                                <div className="p-2 bd-highlight fs-3 ms-auto">Bienvenido a Malocas</div>
+                                                <div className="ms-auto p-2 bd-highlight">
+                                                    <button type="button" className="btn-close ms-auto " data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                            <form id="form_login">
+                                                <div class="mb-3 mx-2 ">
+                                                    <input type="email" className="form-control rounded-pill  border-success border-2 text-center" placeholder="Correo" aria-label="email_login" />
+                                                </div>
+                                                <div class="mb-3 mx-2">
+                                                    <input type="password" className="form-control rounded-pill  border-success border-2 text-center" placeholder="Contraseña" aria-label="psswrd_login" />
+                                                </div>
+                                                <div className="d-grid gap-1 mx-2">
+                                                    <button className="btn btn-success btn-lg rounded-pill">Ingresar</button>
+                                                </div>
+                                            </form>
+                                            <hr />
+                                            <a className="fs-6 text-success" href="#register" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#register">¡Crear una cuenta!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

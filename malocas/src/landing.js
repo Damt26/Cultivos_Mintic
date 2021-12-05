@@ -28,16 +28,16 @@ function LandingPage() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#features">Inicio</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Servicios</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Información</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#login" data-bs-toggle="modal" data-bs-target="#login">Ingreso</a></li>
-                            <li className="nav-item"><a role="button" className="btn btn-success me-lg-3" href="#register" data-bs-toggle="modal" data-bs-target="#register">Registro</a></li>
+                            <li className="nav-item"><a className="nav-link me-lg-3" href="#inicio">Inicio</a></li>
+                            <li className="nav-item"><a className="nav-link me-lg-3" href="#servicios">Servicios</a></li>
+                            <li className="nav-item"><a className="nav-link me-lg-3" href="#informacion">Información</a></li>
+                            <li className="nav-item"><a className="nav-link me-lg-3" href="#login" data-bs-toggle="modal" data-bs-target="#login">Iniciar Sesión</a></li>
+                            <li className="nav-item"><a role="button" className="btn btn-success me-lg-3" href="#register" data-bs-toggle="modal" data-bs-target="#register">Registrarse</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <header className="masthead">
+            <header id="inicio" className="masthead">
                 <div className="container px-5">
                     <div className="row gx-5 align-items-center">
                         <div className="col-lg-6">
@@ -51,7 +51,7 @@ function LandingPage() {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <img src={campo6} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
+                            <img src={campo6} alt="" style={{ height: '25rem', width: '34rem', borderRadius: '18px' }}></img>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ function LandingPage() {
                     </div>
                 </div>
             </aside>
-            <section id="features">
+            <section id="servicios">
                 <div className="container px-5">
                     <div className="row gx-5 align-items-center">
                         <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
@@ -111,7 +111,7 @@ function LandingPage() {
                     </div>
                 </div>
             </section>
-            <aside className="bg-success">
+            <aside id="informacion" className="bg-success">
                 <div className="container px-5">
                     <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                         <div className="col-12 col-lg-5">
@@ -122,7 +122,7 @@ function LandingPage() {
                         </div>
                         <div className="col-sm-8 col-md-6">
                             <img className="img-fluid rounded-circle"
-                                src={campo4} alt="..." style={{ height: '25rem', width: '25rem', borderRadius: '18px' }} />
+                                src={campo4} alt="..." style={{ height: '34rem', width: '34rem', borderRadius: '18px' }} />
                         </div>
                     </div>
                 </div>

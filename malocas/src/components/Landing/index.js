@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import '../../styles/index.css';
 import campo3 from '../../images/campo3.jpg';
 import campo4 from '../../images/campo4.jpg';
@@ -27,8 +28,12 @@ function LandingPage() {
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#features">Inicio</a></li>
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Servicios</a></li>
                             <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Información</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="/login">Ingreso</a></li>
-                            <li className="nav-item"><a role="button" className="btn btn-success me-lg-3" href="/signup">Registro</a></li>
+                            <li className="nav-item">
+                                <Link to="/signup" className="nav-link me-lg-3">Registro</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/login" role="button" className="btn btn-success me-lg-3">Ingresar</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -42,11 +47,11 @@ function LandingPage() {
                                 <h1 className="display-1 lh-1 mb-3 fw-bold" style={{ color: '#034303' }}>Calidad para tus cultivos</h1>
                                 <p className="lead fw-normal text-muted mb-5">Realización de toda clase de actividades agropecuarias y/o agroindustriales en terrenos propios o ajenos.</p>
                                 <div className="d-flex flex-column flex-lg-row align-items-center">
-                                    <a role="button" className="btn btn-success me-lg-3 mb-4 mb-lg-0" href="#!">Ingresar a Malocas </a>
+                                    <Link to="/login" role="button" className="btn btn-success me-lg-3 mb-4 mb-lg-0" >Ingresar a Malocas</Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 d-sm-none d-none d-md-block">
                             <img src={campo6} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
                         </div>
                     </div>
@@ -57,7 +62,7 @@ function LandingPage() {
                     <div className="row gx-6 justify-content-center">
                         <div className="col-xl-8">
                             <p className="fs-4 text text-white mb-4">"La web de Agricola Las Malocas Ltda está clasificada para brindar a través de un sistema la información de la siembra y recolección de cultivos."</p>
-                            <a role="button" className="btn btn-success btn-lg mb-4 mb-lg-0 w-25" href="#!">Registrarse </a>
+                            <Link to="/signup" role="button" className="btn btn-success btn-lg mb-4 mb-lg-0 w-25">Registrarse</Link>
                         </div>
                     </div>
                 </div>
@@ -101,7 +106,7 @@ function LandingPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 order-lg-0">
+                        <div className="col-lg-4 order-lg-0 d-sm-none d-none d-md-block">
                             <img src={campo3} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
                         </div>
                     </div>
@@ -116,14 +121,16 @@ function LandingPage() {
                                 information about your application, why it was built, the problem it solves, or anything else!
                                 There's plenty of space for text here, so don't worry about writing too much.</p>
                         </div>
-                        <div className="col-sm-8 col-md-6">
+                        <div className="col-sm-8 col-md-6 d-sm-none d-none d-md-block">
                             <img className="img-fluid rounded-circle"
                                 src={campo4} alt="..." style={{ height: '25rem', width: '25rem', borderRadius: '18px' }} />
                         </div>
                     </div>
                 </div>
             </aside>
+            <div className="d-sm-none d-none d-md-block"> 
             <img src={campo5} alt="" style={{ height: '90vh', width: '100%' }} />
+            </div>
             <footer className="bg-white pt-4 pb-3">
                 <div className="container px-4 py-2">
                     <div className="row gx-1 fs-5 py-2">

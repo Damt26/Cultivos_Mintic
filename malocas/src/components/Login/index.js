@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import '../../styles/index.css';
 import campo2 from '../../images/campo2.jpg';
 
@@ -6,10 +7,10 @@ function LogIn() {
     return (
         <div className="Login" style={{ backgroundColor: '#E4FFD2', height: '100vh' }}>
             <div className="container mx-auto py-5 px-5 w-50">
-                <div className="card h-auto text-center" style={{ borderRadius: '18px', borderStyle: 'none' }}>
+                <div className="card h-auto text-center shadow " style={{ borderRadius: '18px', borderStyle: 'none' }}>
                     <div className="row g-0">
                         <div className="col-md-6 d-sm-none d-none d-md-block" >
-                            <img src={campo2} className="img-fluid" style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none', height: '100%'}} alt="..." />
+                            <img src={campo2} className="img-fluid" style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none', height: '100%' }} alt="..." />
                         </div>
                         <div className="col-md-6">
                             <div className="card-body">
@@ -18,7 +19,7 @@ function LogIn() {
                                         <p className="fs-3 pt-5">Bienvenido a Malocas</p>
                                     </div>
                                     <div className="ms-auto">
-                                        <a href="/"><button className="btn-close"/></a>
+                                        <Link to="/"><button className="btn-close"/></Link>
                                     </div>
                                 </div>
                                 <form id="form_login ">
@@ -34,7 +35,7 @@ function LogIn() {
                                 </form>
                                 <hr />
                                 <div className="text-center">
-                                    <a className="fs-6 text-success text-decoration-none" href="/signup">¡Crear una cuenta!</a>
+                                    <Link to="/signup" className="fs-6 text-success text-decoration-none">¡Crear una cuenta!</Link>
                                 </div>
                             </div>
                         </div>

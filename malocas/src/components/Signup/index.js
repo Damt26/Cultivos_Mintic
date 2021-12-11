@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import '../../styles/index.css';
 import campo1 from '../../images/campo1.jpg';
 
 function SignUp() {
     return (
         <div className="SingUp" style={{ backgroundColor: '#E4FFD2', height: '100vh' }}>
-            <div className="container mx-auto py-4 px-5 w-75">
-                <div className="card h-50 text-center" style={{ borderRadius: '18px', borderStyle: 'none' }}>
+            <div className="container mx-auto py-4 px-5 w-auto">
+                <div className="card text-center shadow " style={{ borderRadius: '18px', borderStyle: 'none' }}>
                     <div className="row g-0" >
                         <div className="col-md-6 d-sm-none d-none d-md-block">
-                            <img src={campo1} className="img-fluid " style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none', height: '100%' }} alt="..." />
+                            <img src={campo1} className="img-fluid" style={{ borderRadius: '18px 0px 0px 18px', borderStyle: 'none', height: '100%' }} alt="..." />
                         </div>
                         <div className="col-md-6">
                             <div className="card-body">
@@ -18,7 +19,7 @@ function SignUp() {
                                         <p className="fs-3 pt-5">Crear cuenta</p>
                                     </div>
                                     <div className="ms-auto">
-                                        <a href="/"><button className="btn-close" /></a>
+                                        <Link to="/"><button className="btn-close"/></Link>
                                     </div>
                                 </div>
                                 <form className="fs-5" id="form_rgstr">
@@ -39,7 +40,7 @@ function SignUp() {
                                 </form>
                                 <hr />
                                 <div className="text-center">
-                                    <a className="fs-6 text-success text-decoration-none" href="/login">¡Inicia sesión en Malocas!</a>
+                                    <Link to="/login" className="fs-6 text-success text-decoration-none">¡Inicia sesión en Malocas!</Link>
                                 </div>
                             </div>
                         </div>

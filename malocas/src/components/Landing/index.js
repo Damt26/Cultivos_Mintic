@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import '../../styles/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import campo3 from '../../images/campo3.jpg';
 import campo4 from '../../images/campo4.jpg';
 import campo5 from '../../images/campo5.jpg';
@@ -14,7 +14,7 @@ import ecologia from '../../images/ecologia.png';
 function LandingPage() {
     return (
         <div className="LandingPage">
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
                 <div className="container px-5">
                     <a className="navbar-brand py-0" href="#page-top"><img src={azada} alt="azada" style={{ height: '2em', weight: '2em' }} /></a>
                     <h4 className="fw-bold">Malocas</h4>
@@ -25,9 +25,15 @@ function LandingPage() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#features">Inicio</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Servicios</a></li>
-                            <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Información</a></li>
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link me-lg-3">Inicio</Link>
+                                </li>
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link me-lg-3">Servicios</Link>
+                                </li>
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link me-lg-3">Información</Link>
+                                </li>
                             <li className="nav-item">
                                 <Link to="/signup" className="nav-link me-lg-3">Registro</Link>
                             </li>
@@ -38,7 +44,7 @@ function LandingPage() {
                     </div>
                 </div>
             </nav>
-            <header className="masthead">
+            <header className="masthead py-4">
                 <div className="container px-5">
                     <div className="row gx-5 align-items-center">
                         <div className="col-lg-6">
@@ -57,62 +63,60 @@ function LandingPage() {
                     </div>
                 </div>
             </header>
-            <aside className="text-center bg-success">
+            <div className="text-center bg-success py-4 my-5">
                 <div className="container-fluid px-5 pt-0">
                     <div className="row gx-6 justify-content-center">
                         <div className="col-xl-8">
                             <p className="fs-4 text text-white mb-4">"La web de Agricola Las Malocas Ltda está clasificada para brindar a través de un sistema la información de la siembra y recolección de cultivos."</p>
-                            <Link to="/signup" role="button" className="btn btn-success btn-lg mb-4 mb-lg-0 w-25">Registrarse</Link>
+                            <Link to="/signup" role="button" className="btn btn-success btn-lg mb-4 mb-lg-0 w-auto">Registrarse</Link>
                         </div>
                     </div>
                 </div>
-            </aside>
-            <section id="features">
-                <div className="container px-5">
-                    <div className="row gx-5 align-items-center">
-                        <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
-                            <div className="container-fluid px-5">
-                                <div className="row gx-5">
-                                    <div className="col-md-6 mb-5">
-                                        <div className="text-center">
-                                            <img src={siembra2} alt="" style={{ height: '5rem', width: '5rem' }}></img>
-                                            <h3 className="font-alt">Lorem</h3>
-                                            <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 mb-5">
-                                        <div className="text-center">
-                                            <img src={granja} alt="" style={{ height: '5rem', width: '5rem' }}></img>
-                                            <h3 className="font-alt">Lorem</h3>
-                                            <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
-                                        </div>
+            </div>
+            <div className="container px-5 py-4 my-5">
+                <div className="row gx-5 align-items-center">
+                    <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                        <div className="container-fluid px-5">
+                            <div className="row gx-5">
+                                <div className="col-md-6 mb-5">
+                                    <div className="text-center">
+                                        <img src={siembra2} alt="" style={{ height: '5rem', width: '5rem' }}></img>
+                                        <h3 className="font-alt">Lorem</h3>
+                                        <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <div className="col-md-6 mb-5 mb-md-0">
-                                        <div className="text-center">
-                                            <img src={siembra} alt="" style={{ height: '5rem', width: '5rem' }}></img>
-                                            <h3 className="font-alt">Lorem</h3>
-                                            <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
-                                        </div>
+                                <div className="col-md-6 mb-5">
+                                    <div className="text-center">
+                                        <img src={granja} alt="" style={{ height: '5rem', width: '5rem' }}></img>
+                                        <h3 className="font-alt">Lorem</h3>
+                                        <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="text-center">
-                                            <img src={ecologia} alt="" style={{ height: '5rem', width: '5rem' }}></img>
-                                            <h3 className="font-alt">Lorem</h3>
-                                            <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
-                                        </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-6 mb-5 mb-md-0">
+                                    <div className="text-center">
+                                        <img src={siembra} alt="" style={{ height: '5rem', width: '5rem' }}></img>
+                                        <h3 className="font-alt">Lorem</h3>
+                                        <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="text-center">
+                                        <img src={ecologia} alt="" style={{ height: '5rem', width: '5rem' }}></img>
+                                        <h3 className="font-alt">Lorem</h3>
+                                        <p className="text-muted mb-0">Lorem ipsum dolor lorem, consectetur adipiscing elit</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 order-lg-0 d-sm-none d-none d-md-block">
-                            <img src={campo3} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
-                        </div>
+                    </div>
+                    <div className="col-lg-4 order-lg-0 d-sm-none d-none d-md-block">
+                        <img src={campo3} alt="" style={{ height: '25rem', width: '25rem', borderRadius: '18px' }}></img>
                     </div>
                 </div>
-            </section>
-            <aside className="bg-success">
+            </div>
+            <div className="bg-success py-5">
                 <div className="container px-5">
                     <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                         <div className="col-12 col-lg-5">
@@ -127,9 +131,9 @@ function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </aside>
-            <div className="d-sm-none d-none d-md-block"> 
-            <img src={campo5} alt="" style={{ height: '90vh', width: '100%' }} />
+            </div>
+            <div className="d-sm-none d-none d-md-block">
+                <img src={campo5} alt="" style={{ height: '90vh', width: '100%' }} />
             </div>
             <footer className="bg-white pt-4 pb-3">
                 <div className="container px-4 py-2">
@@ -153,8 +157,10 @@ function LandingPage() {
                         <div className="col">
                             <div className=""><b> Ingresos </b></div>
                             <ul className="list-group fs-6">
-                                <li className="list-group-item border-white">Inicio de sesión</li>
-                                <li className="list-group-item border-white">Registro</li>
+                                <li className="list-group-item border-white"><Link to="/login" className="text-decoration-none text-dark">Inicio de sesión</Link></li>
+                                
+
+                                <li className="list-group-item border-white"><Link to="/signup" className="text-decoration-none text-dark">Registro</Link></li>
                             </ul>
                         </div>
                         <div className="col">
@@ -171,7 +177,7 @@ function LandingPage() {
                             <b>Malocas</b>
                         </div>
                         <div className="col text-end text-muted">
-                            &copy; Your Website 2021. All Rights Reserved.
+                            &copy; Agricola Las Malocas Ltda 2021. All Rights Reserved.
                         </div>
                     </div>
                 </div>
